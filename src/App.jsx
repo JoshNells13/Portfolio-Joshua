@@ -177,7 +177,7 @@ export default function Portfolio() {
                   transition={{ duration: 0.6 }}
                   className="flex justify-center"
                 >
-                  <div className="w-full max-w-sm rounded-2xl shadow-2xl p-6 dark:bg-gray-900 cursor-target">
+                  <div className="w-full max-w-sm rounded-2xl shadow-2xl p-6 bg-gray-900 cursor-target">
                     {/* Replace with real image or Lottie */}
                     <div className="h-48 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-xl flex items-center justify-center text-white font-bold">
                       <Laugh />
@@ -409,7 +409,7 @@ function Skill({ name, level = 60 }) {
         <span>{name}</span>
         <span>{level}%</span>
       </div>
-      <div className="w-full h-2 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+      <div className="w-full h-2 rounded-full  dark:bg-gray-700 overflow-hidden">
         <div
           className="h-full rounded-full bg-indigo-600"
           style={{ width: `${level}%` }}
