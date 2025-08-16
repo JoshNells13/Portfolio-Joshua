@@ -177,7 +177,7 @@ export default function Portfolio() {
                   transition={{ duration: 0.6 }}
                   className="flex justify-center"
                 >
-                  <div className="w-full max-w-sm rounded-2xl shadow-2xl p-6 bg-white dark:bg-gray-900 cursor-target">
+                  <div className="w-full max-w-sm rounded-2xl shadow-2xl p-6 dark:bg-gray-900 cursor-target">
                     {/* Replace with real image or Lottie */}
                     <div className="h-48 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-xl flex items-center justify-center text-white font-bold">
                       <Laugh />
@@ -216,7 +216,7 @@ export default function Portfolio() {
                 <motion.article
                   key={p.id}
                   whileHover={{ y: -6 }}
-                  className="bg-white dark:bg-gray-900 rounded-2xl p-5 shadow cursor-target"
+                  className=" dark:bg-gray-900 rounded-2xl p-5 shadow cursor-target"
                 >
                   <h3 className="font-semibold text-lg">{p.title}</h3>
                   <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
@@ -263,7 +263,7 @@ export default function Portfolio() {
                 <motion.article
                   key={p.id}
                   whileHover={{ y: -6 }}
-                  className="bg-white dark:bg-gray-900 rounded-2xl p-5 shadow cursor-target"
+                  className=" dark:bg-gray-900 rounded-2xl p-5 shadow cursor-target"
                 >
                   <h3 className="font-semibold text-lg">{p.title}</h3>
                   <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
@@ -317,7 +317,7 @@ export default function Portfolio() {
               </div>
 
               <div>
-                <div className="rounded-xl p-6 bg-indigo-50 dark:bg-indigo-900/30 cursor-target">
+                <div className="rounded-xl p-6  dark:bg-indigo-900/30 cursor-target">
                   <h3 className="font-semibold">Skills</h3>
                   <motion.div className="mt-3 space-y-3">
                     <Skill name="React" level={50} />
