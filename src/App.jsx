@@ -6,9 +6,7 @@ import DarkVeil from "./Background/DarkVeil";
 import { Laugh } from "lucide-react";
 import Magnet from "./Animate/Magnet";
 import TargetCursor from "./Animate/TargetCursor";
-import './App.css'
-
-
+import "./App.css";
 
 const projects = [
   {
@@ -22,7 +20,7 @@ const projects = [
     id: 2,
     title: "CarWash Dashboard",
     description: "Admin dashboard built with responsive tables",
-    tags: ["Laravel","Filament"],
+    tags: ["Laravel", "Filament"],
     url: "#",
   },
   {
@@ -36,26 +34,32 @@ const projects = [
 const Certificate = [
   {
     id: 1,
-    title: "Medallion for Excellence – National Student Skills Competition (LKS) in Web Technologies, Indonesia 2025",
-    description: "Awarded for outstanding performance at the national level, demonstrating advanced skills in full-stack web development using Laravel and React.",
-    location: ' Jakarta & Depok | 🗓️ July 27 – August 1, 2025',
+    title:
+      "Medallion for Excellence – National Student Skills Competition (LKS) in Web Technologies, Indonesia 2025",
+    description:
+      "Awarded for outstanding performance at the national level, demonstrating advanced skills in full-stack web development using Laravel and React.",
+    location: " Jakarta & Depok | 🗓️ July 27 – August 1, 2025",
     tags: ["Javascript", "React JS", "Laravel"],
-    
+
     url: "#",
   },
   {
     id: 2,
-    title: "1st Place – Provincial Student Skills Competition (LKS) in Web Technologies, Central Kalimantan 2025",
-    description: "Secured first place by building a responsive and functional web application, showcasing strong problem-solving and coding abilities.",
-    tags: ["Laravel","React JS"],
-    location : ' Palangka Raya | 🗓️ June 23 – 26, 2025',
+    title:
+      "1st Place – Provincial Student Skills Competition (LKS) in Web Technologies, Central Kalimantan 2025",
+    description:
+      "Secured first place by building a responsive and functional web application, showcasing strong problem-solving and coding abilities.",
+    tags: ["Laravel", "React JS"],
+    location: " Palangka Raya | 🗓️ June 23 – 26, 2025",
     url: "#",
   },
   {
     id: 3,
-    title: "1st Place – City Student Skills Competition (LKS) in Web Technologies, Palangka Raya 2025",
-    description: "Recognized as the best competitor in the city-level competition, excelling in both front-end and back-end development tasks With Javascript Games.",
-    location : 'Palangka Raya | 🗓️ May 26 – 27, 2025',
+    title:
+      "1st Place – City Student Skills Competition (LKS) in Web Technologies, Palangka Raya 2025",
+    description:
+      "Recognized as the best competitor in the city-level competition, excelling in both front-end and back-end development tasks With Javascript Games.",
+    location: "Palangka Raya | 🗓️ May 26 – 27, 2025",
     tags: ["JavaScript", "Laravel"],
     url: "#",
   },
@@ -68,21 +72,21 @@ const handleAnimationComplete = () => {
 export default function Portfolio() {
   const [open, setOpen] = useState(false);
 
-
   return (
     <div>
       <TargetCursor spinDuration={2} />
 
       <div className="relative w-full min-h-screen">
-
         <div className="absolute inset-0 -z-10">
           <DarkVeil />
         </div>
-    
 
-        <main  className="min-h-screen bg-gradient-to-b from-blue-900/70 via-blue-950/70 to-black/70 dark:from-blue-950/70 dark:via-gray-900/70 dark:to-black/70 text-gray-100 transition-colors">
+        <main className="min-h-screen bg-gradient-to-b from-blue-900/70 via-blue-950/70 to-black/70 dark:from-blue-950/70 dark:via-gray-900/70 dark:to-black/70 text-gray-100 transition-colors">
           <header className="container mx-auto p-6 flex items-center justify-between">
-            <a href="#hero" className="font-extrabold text-xl tracking-tight cursor-target">
+            <a
+              href="#hero"
+              className="font-extrabold text-xl tracking-tight cursor-target"
+            >
               Joshua<span className="text-indigo-600">.</span>
             </a>
 
@@ -149,8 +153,8 @@ export default function Portfolio() {
                   onLetterAnimationComplete={handleAnimationComplete}
                 />
                 <p className="mt-6 max-w-lg">
-                  Saya Joshua — Pelajar SMKN 1 PALANGKA RAYA Jurusan Rekayasa Perangkat Lunak.Masih
-                  Belajarrr
+                  I'm Joshua — a student at SMKN 1 PALANGKA RAYA majoring in
+                  Software Engineering. Still learning.
                 </p>
 
                 <div className="mt-8 flex gap-4">
@@ -207,8 +211,9 @@ export default function Portfolio() {
 
           <section id="projects" className="container mx-auto px-6 py-12">
             <h2 className="text-2xl font-bold">My Project</h2>
-            <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-xl">
-              Kumpulan Projek Yang Pernah Saya Kerjakan Termasuk Tugas Sekolah
+            <p className="mt-2 text-gray-600  max-w-xl">
+              A collection of projects that I have worked on, including school
+              assignments
             </p>
 
             <div className="mt-8 grid md:grid-cols-3 gap-6">
@@ -219,7 +224,7 @@ export default function Portfolio() {
                   className="bg-gray-900 rounded-2xl p-5 shadow cursor-target"
                 >
                   <h3 className="font-semibold text-lg">{p.title}</h3>
-                  <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                  <p className="mt-2 text-sm text-gray-600">
                     {p.description}
                   </p>
                   <div className="mt-4 flex gap-2 flex-wrap">
@@ -254,8 +259,8 @@ export default function Portfolio() {
           {/* PRESTASI */}
           <section id="projects" className="container mx-auto px-6 py-12">
             <h2 className="text-2xl font-bold">Certificate</h2>
-            <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-xl">
-              Kumpulan Sertifikat Yang Saya Dapatkan
+            <p className="mt-2 text-gray-600  max-w-xl">
+              Collection of Certificates I Received
             </p>
 
             <div className="mt-8 grid md:grid-cols-3 gap-6">
@@ -266,7 +271,7 @@ export default function Portfolio() {
                   className=" bg-gray-900 rounded-2xl p-5 shadow cursor-target"
                 >
                   <h3 className="font-semibold text-lg">{p.title}</h3>
-                  <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+                  <p className="mt-2 text-sm text-gray-600 ">
                     {p.description}
                   </p>
                   <div className="mt-4 flex gap-2 flex-wrap">
@@ -302,10 +307,11 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-2xl font-bold">About Me</h2>
-                <p className="mt-3 text-gray-600 dark:text-gray-300">
-                  Saya pelajar SMK jurusan Rekayasa Perangkat Lunak.
-                  Berpengalaman membuat aplikasi desktop (C#), web fullstack
-                  (Laravel & React), dan game sederhana.
+                <p className="mt-3 text-gray-600">
+                  I'm a vocational high school student majoring in Software
+                  Engineering. I have experience creating desktop applications
+                  (C#), full-stack web applications (Laravel & React), and
+                  simple games.
                 </p>
 
                 <ul className="mt-4 grid grid-cols-2 gap-2 text-sm">
@@ -333,7 +339,7 @@ export default function Portfolio() {
           {/* CONTACT */}
           <section id="contact" className="container mx-auto px-6 py-12">
             <h2 className="text-2xl font-bold">Contact</h2>
-            <p className="mt-2 text-gray-600 dark:text-gray-300">
+            <p className="mt-2 text-gray-600">
               STILL IN DEVELOPMENT
             </p>
 
@@ -369,10 +375,7 @@ export default function Portfolio() {
                   >
                     Kirim
                   </button>
-                  <button
-                    type="button"
-                    className="px-4 py-2 rounded-md border"
-                  >
+                  <button type="button" className="px-4 py-2 rounded-md border">
                     Email
                   </button>
                 </div>
@@ -386,7 +389,11 @@ export default function Portfolio() {
                 © {new Date().getFullYear()} Joshua STILL IN DEVELOPMENT
               </p>
               <div className="flex gap-3 mt-3 md:mt-0">
-                <a href="https://github.com/JoshNells13" target="blank" className="text-sm cursor-target">
+                <a
+                  href="https://github.com/JoshNells13"
+                  target="blank"
+                  className="text-sm cursor-target"
+                >
                   GitHub
                 </a>
                 <a href="#" className="text-sm cursor-target">
