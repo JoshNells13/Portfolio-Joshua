@@ -67,10 +67,10 @@ const handleAnimationComplete = () => {
 
 export default function Portfolio() {
   const [open, setOpen] = useState(false);
-  const [themeDark, setThemeDark] = useState(false);
+
 
   return (
-    <div className={`${themeDark ? "dark" : ""}`}>
+    <div>
       <TargetCursor spinDuration={2} />
 
       <div className="relative w-full min-h-screen">
@@ -216,7 +216,7 @@ export default function Portfolio() {
                 <motion.article
                   key={p.id}
                   whileHover={{ y: -6 }}
-                  className=" dark:bg-gray-900 rounded-2xl p-5 shadow cursor-target"
+                  className="bg-gray-900 rounded-2xl p-5 shadow cursor-target"
                 >
                   <h3 className="font-semibold text-lg">{p.title}</h3>
                   <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
@@ -263,7 +263,7 @@ export default function Portfolio() {
                 <motion.article
                   key={p.id}
                   whileHover={{ y: -6 }}
-                  className=" dark:bg-gray-900 rounded-2xl p-5 shadow cursor-target"
+                  className=" bg-gray-900 rounded-2xl p-5 shadow cursor-target"
                 >
                   <h3 className="font-semibold text-lg">{p.title}</h3>
                   <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
@@ -317,7 +317,7 @@ export default function Portfolio() {
               </div>
 
               <div>
-                <div className="rounded-xl p-6  dark:bg-indigo-900/30 cursor-target">
+                <div className="rounded-xl p-6 bg-indigo-900/30 cursor-target">
                   <h3 className="font-semibold">Skills</h3>
                   <motion.div className="mt-3 space-y-3">
                     <Skill name="React" level={50} />
@@ -371,7 +371,6 @@ export default function Portfolio() {
                   </button>
                   <button
                     type="button"
-                    onClick={() => window.open("mailto:email@example.com")}
                     className="px-4 py-2 rounded-md border"
                   >
                     Email
