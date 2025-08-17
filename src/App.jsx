@@ -161,14 +161,14 @@ export default function Portfolio() {
                     href="#projects"
                     className="inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white font-medium shadow cursor-target hover:bg-blue-700  transition-colors duration:300"
                   >
-                    Lihat Proyek
+                    Project
                   </a>
 
                   <a
                     href="#contact"
                     className="inline-flex items-center px-4 py-2 rounded-md border cursor-target  cursor-target hover:bg-blue-700  transition-colors duration:300"
                   >
-                    Hubungi
+                    Contact
                   </a>
                 </div>
               </motion.div>
@@ -210,7 +210,7 @@ export default function Portfolio() {
 
           <section id="projects" className="container mx-auto px-6 py-12">
             <h2 className="text-2xl font-bold">My Project</h2>
-            <p className="mt-2 text-gray-600  max-w-xl">
+            <p className="mt-2 text-gray-300  max-w-xl">
               A collection of projects that I have worked on, including school
               assignments
             </p>
@@ -223,7 +223,7 @@ export default function Portfolio() {
                   className="bg-gray-900 rounded-2xl p-5 shadow cursor-target"
                 >
                   <h3 className="font-semibold text-lg">{p.title}</h3>
-                  <p className="mt-2 text-sm text-gray-600">
+                  <p className="mt-2 text-sm text-gray-300">
                     {p.description}
                   </p>
                   <div className="mt-4 flex gap-2 flex-wrap">
@@ -258,7 +258,7 @@ export default function Portfolio() {
           {/* PRESTASI */}
           <section id="projects" className="container mx-auto px-6 py-12">
             <h2 className="text-2xl font-bold">Certificate</h2>
-            <p className="mt-2 text-gray-600  max-w-xl">
+            <p className="mt-2 text-gray-300  max-w-xl">
               Collection of Certificates I Received
             </p>
 
@@ -270,7 +270,7 @@ export default function Portfolio() {
                   className=" bg-gray-900 rounded-2xl p-5 shadow cursor-target"
                 >
                   <h3 className="font-semibold text-lg">{p.title}</h3>
-                  <p className="mt-2 text-sm text-gray-600 ">
+                  <p className="mt-2 text-sm text-gray-300 ">
                     {p.description}
                   </p>
                   <div className="mt-4 flex gap-2 flex-wrap">
@@ -306,7 +306,7 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-2xl font-bold">About Me</h2>
-                <p className="mt-3 text-gray-600">
+                <p className="mt-3 text-gray-300">
                   I'm a vocational high school student majoring in Software
                   Engineering. I have experience creating desktop applications
                   (C#), full-stack web applications (Laravel & React), and
