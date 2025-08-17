@@ -5,7 +5,6 @@ import TextPressure from "./Animate/PressureText";
 import DarkVeil from "./Background/DarkVeil";
 import { Laugh } from "lucide-react";
 import Magnet from "./Animate/Magnet";
-import TargetCursor from "./Animate/TargetCursor";
 import "./App.css";
 
 const projects = [
@@ -74,7 +73,7 @@ export default function Portfolio() {
 
   return (
     <div>
-      <TargetCursor spinDuration={2} />
+
 
       <div className="relative w-full min-h-screen">
         <div className="absolute inset-0 -z-10">
