@@ -11,6 +11,8 @@ import ProfileCard from "./Animate/ProfileCard";
 
 import "./App.css";
 import { useEffect } from "react";
+import Footer from "./Component/Footer";
+import Header from "./Component/Header";
 
 const projects = [
   {
@@ -74,7 +76,7 @@ const handleAnimationComplete = () => {
 };
 
 export default function Portfolio() {
-  const [open, setOpen] = useState(false);
+
 
   useEffect(() => {
     AOS.init({
@@ -91,53 +93,7 @@ export default function Portfolio() {
         </div>
 
         <main className="min-h-screen bg-gradient-to-b from-blue-900/70 via-blue-950/70 to-black/70 dark:from-blue-950/70 dark:via-gray-900/70 dark:to-black/70 text-gray-100 transition-colors">
-          <header className="container mx-auto p-6 flex items-center justify-between">
-            <Magnet>
-            <a
-              href="#hero"
-              className="font-extrabold text-xl tracking-tight"
-              data-aos="fade-right"
-            >
-              Joshua<span className="text-indigo-600">.</span>
-            </a>
-            </Magnet>
-
-            <nav className="hidden md:flex gap-6 items-center" data-aos="fade-left">
-              <a href="#projects" className="hover:underline cursor-target">
-                Projects
-              </a>
-              <a href="#about" className="hover:underline cursor-target">
-                About
-              </a>
-              <a href="#contact" className="hover:underline cursor-target">
-                Contact
-              </a>
-            </nav>
-
-            <button
-              className="md:hidden p-2 rounded-md border"
-              onClick={() => setOpen((s) => !s)}
-              aria-label="Open menu"
-            >
-              {open ? "✖" : "☰"}
-            </button>
-          </header>
-
-          {open && (
-            <div className="md:hidden container mx-auto px-6 pb-4">
-              <nav className="flex flex-col gap-3">
-                <a href="#projects" className="block">
-                  Projects
-                </a>
-                <a href="#about" className="block">
-                  About
-                </a>
-                <a href="#contact" className="block">
-                  Contact
-                </a>
-              </nav>
-            </div>
-          )}
+          <Header />
 
           {/* HERO */}
           <section id="hero" className="container mx-auto px-6 py-12 md:py-20">
@@ -199,7 +155,7 @@ export default function Portfolio() {
                     handle="joshualearn"
                     status="Offline"
                     contactText="Contact Me"
-                    avatarUrl="/path/to/avatar.jpg"
+                    // avatarUrl="/path/to/avatar.jpg"
                     showUserInfo={true}
                     enableTilt={true}
                     enableMobileTilt={false}
@@ -387,26 +343,7 @@ export default function Portfolio() {
               </form>
             </div>
           </section>
-
-          <footer className="border-t dark:border-gray-700 mt-12">
-            <div className="container mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center">
-              <p className="text-sm">
-                © {new Date().getFullYear()} Joshua STILL IN DEVELOPMENT
-              </p>
-              <div className="flex gap-3 mt-3 md:mt-0">
-                <a
-                  href="https://github.com/JoshNells13"
-                  target="blank"
-                  className="text-sm cursor-target"
-                >
-                  GitHub
-                </a>
-                <a href="#" className="text-sm cursor-target">
-                  LinkedIn
-                </a>
-              </div>
-            </div>
-          </footer>
+          <Footer/>
         </main>
       </div>
     </div>
