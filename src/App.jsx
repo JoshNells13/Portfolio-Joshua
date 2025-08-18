@@ -262,10 +262,10 @@ export default function Portfolio() {
           {/* PRESTASI */}
           <section id="projects" className="container mx-auto px-6 py-12">
             <h2 className="text-2xl font-bold" data-aos="fade-right">
-              Certificate
+              Achievement
             </h2>
             <p className="mt-2 text-gray-300  max-w-xl" data-aos="fade-left">
-              Collection of Certificates I Received
+              Collection of Achievement I Received
             </p>
 
             <div
@@ -280,6 +280,7 @@ export default function Portfolio() {
                 >
                   <h3 className="font-semibold text-lg">{p.title}</h3>
                   <p className="mt-2 text-sm text-gray-300 ">{p.description}</p>
+                  <p className="mt-2 text-sm text-gray-300 ">{p.location}</p>
                   <div className="mt-4 flex gap-2 flex-wrap">
                     {p.tags.map((t) => (
                       <span
