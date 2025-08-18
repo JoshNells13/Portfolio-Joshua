@@ -5,7 +5,12 @@ import TextPressure from "./Animate/PressureText";
 import DarkVeil from "./Background/DarkVeil";
 import { Laugh } from "lucide-react";
 import Magnet from "./Animate/Magnet";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import ProfileCard from "./Animate/ProfileCard";
+
 import "./App.css";
+import { useEffect } from "react";
 
 const projects = [
   {
@@ -71,10 +76,15 @@ const handleAnimationComplete = () => {
 export default function Portfolio() {
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false, 
+    });
+  }, []);
+
   return (
     <div>
-
-
       <div className="relative w-full min-h-screen">
         <div className="absolute inset-0 -z-10">
           <DarkVeil />
@@ -82,12 +92,14 @@ export default function Portfolio() {
 
         <main className="min-h-screen bg-gradient-to-b from-blue-900/70 via-blue-950/70 to-black/70 dark:from-blue-950/70 dark:via-gray-900/70 dark:to-black/70 text-gray-100 transition-colors">
           <header className="container mx-auto p-6 flex items-center justify-between">
+            <Magnet>
             <a
               href="#hero"
-              className="font-extrabold text-xl tracking-tight cursor-target"
+              className="font-extrabold text-xl tracking-tight"
             >
               Joshua<span className="text-indigo-600">.</span>
             </a>
+            </Magnet>
 
             <nav className="hidden md:flex gap-6 items-center">
               <a href="#projects" className="hover:underline cursor-target">
@@ -134,8 +146,8 @@ export default function Portfolio() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <p className="text-sm uppercase tracking-widest text-white">
-                  Halo Saya
+                <p className="text-sm  tracking-widest text-white">
+              Hello,I am
                 </p>
                 <SplitText
                   text="Joshua Christian Lionel!"
@@ -173,49 +185,43 @@ export default function Portfolio() {
                 </div>
               </motion.div>
 
-              <Magnet>
+              
                 <motion.div
                   initial={{ opacity: 0, scale: 0.98 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6 }}
                   className="flex justify-center"
                 >
-                  <div className="w-full max-w-sm rounded-2xl shadow-2xl p-6 bg-gray-900 cursor-target">
-                    {/* Replace with real image or Lottie */}
-                    <div className="h-48 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-xl flex items-center justify-center text-white font-bold">
-                      <Laugh />
-                    </div>
-                    <div className="mt-4">
-                      <h3 className="font-bold text-lg">Joshua</h3>
-                      <p className="text-sm mt-1">
-                        Fullstack Developer | UI enthusiast | LKS Nationalist
-                      </p>
-                      <div className="mt-3 flex gap-2 text-xs flex-wrap">
-                        <span className="px-2 py-1 rounded-full border">
-                          React
-                        </span>
-                        <span className="px-2 py-1 rounded-full border">
-                          Laravel
-                        </span>
-                        <span className="px-2 py-1 rounded-full border">
-                          C#
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+                  <ProfileCard
+                    name="Joshua CL"
+                    title="Fullstack Developer"
+                    handle="joshualearn"
+                    status="Offline"
+                    contactText="Contact Me"
+                    avatarUrl="/path/to/avatar.jpg"
+                    showUserInfo={true}
+                    enableTilt={true}
+                    enableMobileTilt={false}
+                    onContactClick={() => console.log("Contact clicked")}
+                  />
                 </motion.div>
-              </Magnet>
+      
             </div>
           </section>
 
           <section id="projects" className="container mx-auto px-6 py-12">
-            <h2 className="text-2xl font-bold">My Project</h2>
-            <p className="mt-2 text-gray-300  max-w-xl">
+            <h2 className="text-2xl font-bold" data-aos="fade-right">
+              My Project
+            </h2>
+            <p className="mt-2 text-gray-300  max-w-xl" data-aos="fade-left">
               A collection of projects that I have worked on, including school
               assignments
             </p>
 
-            <div className="mt-8 grid md:grid-cols-3 gap-6">
+            <div
+              className="mt-8 grid md:grid-cols-3 gap-6"
+              data-aos="fade-left"
+            >
               {projects.map((p) => (
                 <motion.article
                   key={p.id}
@@ -223,9 +229,7 @@ export default function Portfolio() {
                   className="bg-gray-900 rounded-2xl p-5 shadow cursor-target"
                 >
                   <h3 className="font-semibold text-lg">{p.title}</h3>
-                  <p className="mt-2 text-sm text-gray-300">
-                    {p.description}
-                  </p>
+                  <p className="mt-2 text-sm text-gray-300">{p.description}</p>
                   <div className="mt-4 flex gap-2 flex-wrap">
                     {p.tags.map((t) => (
                       <span
@@ -241,7 +245,7 @@ export default function Portfolio() {
                       href={p.url}
                       className="text-indigo-600 hover:underline text-sm"
                     >
-                      Lihat detail
+                      Detail
                     </a>
                     <a
                       href={p.url}
@@ -257,12 +261,17 @@ export default function Portfolio() {
 
           {/* PRESTASI */}
           <section id="projects" className="container mx-auto px-6 py-12">
-            <h2 className="text-2xl font-bold">Certificate</h2>
-            <p className="mt-2 text-gray-300  max-w-xl">
+            <h2 className="text-2xl font-bold" data-aos="fade-right">
+              Certificate
+            </h2>
+            <p className="mt-2 text-gray-300  max-w-xl" data-aos="fade-left">
               Collection of Certificates I Received
             </p>
 
-            <div className="mt-8 grid md:grid-cols-3 gap-6">
+            <div
+              className="mt-8 grid md:grid-cols-3 gap-6"
+              data-aos="fade-right"
+            >
               {Certificate.map((p) => (
                 <motion.article
                   key={p.id}
@@ -270,9 +279,7 @@ export default function Portfolio() {
                   className=" bg-gray-900 rounded-2xl p-5 shadow cursor-target"
                 >
                   <h3 className="font-semibold text-lg">{p.title}</h3>
-                  <p className="mt-2 text-sm text-gray-300 ">
-                    {p.description}
-                  </p>
+                  <p className="mt-2 text-sm text-gray-300 ">{p.description}</p>
                   <div className="mt-4 flex gap-2 flex-wrap">
                     {p.tags.map((t) => (
                       <span
@@ -283,27 +290,17 @@ export default function Portfolio() {
                       </span>
                     ))}
                   </div>
-                  <div className="mt-4 flex items-center justify-between">
-                    <a
-                      href={p.url}
-                      className="text-indigo-600 hover:underline text-sm"
-                    >
-                      Lihat detail
-                    </a>
-                    <a
-                      href={p.url}
-                      className="text-sm px-3 py-1 border rounded-md"
-                    >
-                      Live
-                    </a>
-                  </div>
+                  <div className="mt-4 flex items-center justify-between"></div>
                 </motion.article>
               ))}
             </div>
           </section>
           {/* ABOUT */}
           <section id="about" className="container mx-auto px-6 py-12">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div
+              className="grid md:grid-cols-2 gap-8 items-center"
+              data-aos="fade-right"
+            >
               <div>
                 <h2 className="text-2xl font-bold">About Me</h2>
                 <p className="mt-3 text-gray-300">
@@ -321,26 +318,33 @@ export default function Portfolio() {
                 </ul>
               </div>
 
+              <Magnet>
               <div>
-                <div className="rounded-xl p-6 bg-indigo-900/30 cursor-target">
-                  <h3 className="font-semibold">Skills</h3>
+                <div
+                  className="rounded-xl p-6 bg-indigo-900/30"
+                  data-aos="fade-up"
+                >
+                  <h3 className="font-semibold">Skills Language</h3>
                   <motion.div className="mt-3 space-y-3">
-                    <Skill name="React" level={50} />
+                    <Skill name="HTML/CSS" level={50} />
                     <Skill name="JavaScript" level={50} />
-                    <Skill name="Laravel" level={75} />
+                    <Skill name="PHP" level={75} />
                     <Skill name="C#" level={50} />
                   </motion.div>
                 </div>
               </div>
+              </Magnet>
             </div>
           </section>
 
           {/* CONTACT */}
-          <section id="contact" className="container mx-auto px-6 py-12">
+          <section
+            id="contact"
+            className="container mx-auto px-6 py-12"
+            data-aos="fade-down"
+          >
             <h2 className="text-2xl font-bold">Contact</h2>
-            <p className="mt-2 text-gray-600">
-              STILL IN DEVELOPMENT
-            </p>
+            <p className="mt-2 text-gray-600">STILL IN DEVELOPMENT</p>
 
             <div className="mt-6 max-w-xl">
               <form
