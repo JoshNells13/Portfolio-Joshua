@@ -78,7 +78,7 @@ export default function Portfolio() {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 2000,
       once: false, 
     });
   }, []);
@@ -96,12 +96,13 @@ export default function Portfolio() {
             <a
               href="#hero"
               className="font-extrabold text-xl tracking-tight"
+              data-aos="fade-right"
             >
               Joshua<span className="text-indigo-600">.</span>
             </a>
             </Magnet>
 
-            <nav className="hidden md:flex gap-6 items-center">
+            <nav className="hidden md:flex gap-6 items-center" data-aos="fade-left">
               <a href="#projects" className="hover:underline cursor-target">
                 Projects
               </a>
@@ -190,7 +191,7 @@ export default function Portfolio() {
                   initial={{ opacity: 0, scale: 0.98 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6 }}
-                  className="flex justify-center"
+                  className="flex justify-center cursor-pointer"
                 >
                   <ProfileCard
                     name="Joshua CL"
@@ -226,7 +227,7 @@ export default function Portfolio() {
                 <motion.article
                   key={p.id}
                   whileHover={{ y: -6 }}
-                  className="bg-gray-900 rounded-2xl p-5 shadow cursor-target"
+                  className="bg-gray-900 rounded-2xl p-5 shadow cursor-pointer"
                 >
                   <h3 className="font-semibold text-lg">{p.title}</h3>
                   <p className="mt-2 text-sm text-gray-300">{p.description}</p>
@@ -276,7 +277,7 @@ export default function Portfolio() {
                 <motion.article
                   key={p.id}
                   whileHover={{ y: -6 }}
-                  className=" bg-gray-900 rounded-2xl p-5 shadow cursor-target"
+                  className=" bg-gray-900 rounded-2xl p-5 shadow cursor-target cursor-pointer"
                 >
                   <h3 className="font-semibold text-lg">{p.title}</h3>
                   <p className="mt-2 text-sm text-gray-300 ">{p.description}</p>
@@ -322,7 +323,7 @@ export default function Portfolio() {
               <Magnet>
               <div>
                 <div
-                  className="rounded-xl p-6 bg-indigo-900/30"
+                  className="rounded-xl p-6 bg-indigo-900/30 cursor-pointer"
                   data-aos="fade-up"
                 >
                   <h3 className="font-semibold">Skills Language</h3>
