@@ -13,6 +13,8 @@ import "./App.css";
 import { useEffect } from "react";
 import Footer from "./Component/Footer";
 import Header from "./Component/Header";
+import { Github } from "lucide-react";
+import { Instagram } from "lucide-react";
 
 const projects = [
   {
@@ -302,45 +304,13 @@ export default function Portfolio() {
             data-aos="fade-down"
           >
             <h2 className="text-2xl font-bold">Contact</h2>
-            <p className="mt-2 text-gray-600">STILL IN DEVELOPMENT</p>
-
-            <div className="mt-6 max-w-xl">
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  alert("Form submitted! (demo)");
-                }}
-                className="grid gap-3"
-              >
-                <input
-                  className="px-4 py-2 rounded-md border text-black"
-                  placeholder="Nama"
-                  required
-                />
-                <input
-                  className="px-4 py-2 rounded-md border text-black"
-                  placeholder="Email"
-                  type="email"
-                  required
-                />
-                <textarea
-                  className="px-4 py-2 rounded-md border text-black"
-                  placeholder="Pesan"
-                  rows={4}
-                  required
-                />
-                <div className="flex gap-3">
-                  <button
-                    type="submit"
-                    className="px-4 py-2 rounded-md bg-indigo-600 text-white"
-                  >
-                    Kirim
-                  </button>
-                  <button type="button" className="px-4 py-2 rounded-md border">
-                    Email
-                  </button>
-                </div>
-              </form>
+            <div className="mt-6 max-w-xl flex gap-3">
+              <div className="flex gap-4">
+                <Github /><h3>  |  @JoshNells13</h3>
+              </div>
+              <div className="flex gap-4">
+                <Instagram/><h3> | @joshuaffmax</h3>
+              </div>
             </div>
           </section>
           <Footer/>
