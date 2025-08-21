@@ -8,6 +8,7 @@ import Magnet from "./Animate/Magnet";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ProfileCard from "./Animate/ProfileCard";
+import ProfileImg from "../public/Profile.jpeg"
 
 import "./App.css";
 import { useEffect } from "react";
@@ -157,11 +158,10 @@ export default function Portfolio() {
                     handle="joshualearn"
                     status="Offline"
                     contactText="Contact Me"
-                    // avatarUrl="/path/to/avatar.jpg"
+                    avatarUrl= {ProfileImg}
                     showUserInfo={true}
                     enableTilt={true}
                     enableMobileTilt={false}
-                    onContactClick={() => console.log("Contact clicked")}
                   />
                 </motion.div>
       
